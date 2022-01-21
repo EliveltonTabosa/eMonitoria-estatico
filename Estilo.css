@@ -35,3 +35,29 @@ h{
 #foto1{
     text-align: center;
 }
+div#resultados{
+    font: normal 15pt verdana;
+    width: auto;
+    height: auto ;
+    background-color: rgb(0, 96, 99);
+    color: white;
+    border-radius: 10px;
+    font-weight:bolder;
+    text-align: center;
+    line-height: center;
+    float:right;
+    
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #8d8d8d56;
+    font-size: 20px;
+    border: none;
+    color: rgb(0, 96, 99);
+    padding: 8px 20px;
+    font-weight:bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    
+  }
+
