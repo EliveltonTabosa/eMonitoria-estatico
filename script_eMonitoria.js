@@ -59,10 +59,10 @@ function lançar(){
    }
    n.innerHTML = nota
    if(nota>=90){
-       img.setAttribute('src','Joinha.png')
+       img.setAttribute('src','midia/Joinha.png')
        
    }else{
-    img.removeAttribute('src','Joinha.png')
+    img.removeAttribute('src','midia/Joinha.png')
    }
    foto1.appendChild(img) //joga a imagem na div da var foto1
    
