@@ -60,4 +60,12 @@ input[type=button], input[type=submit], input[type=reset] {
     border-radius: 30px;
     
   }
+footer{
+    text-align: center;
+}
 
+
+img#dorinha{
+     max-width: 15px;
+     max-height: 15px;
+}

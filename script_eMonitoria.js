@@ -6,6 +6,7 @@ let pontos=[
     [16,'com impacto', false],
     [100,'zerada',false],
     ]
+    
 var nota = 100
 var n = document.getElementById('n')   //'n' é o span da nota dentro da div
 n.innerHTML = nota
