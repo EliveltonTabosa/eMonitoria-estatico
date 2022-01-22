@@ -4,43 +4,50 @@ let pontos=[
     [6,'sem impacto',false],
     [11,'sistema',false],
     [16,'com impacto', false],
+    [5,'demanda',false],
+    [50,'médica',false],
     [100,'zerada',false],
     ]
-    
+
 var nota = 100
 var n = document.getElementById('n')   //'n' é o span da nota dentro da div
 n.innerHTML = nota
 var img = document.createElement('img') // img teste
 img.setAttribute('id','foto') // img teste
 
-var linha1 = document.getElementById('linha1')
-linha1.innerHTML += `[ ${pontos[0][1]} → ${pontos[0][0]} pontos]`
-var linha2 = document.getElementById('linha2')
-linha2.innerHTML += `[ ${pontos[1][1]} → ${pontos[1][0]} pontos]`
-var linha3 = document.getElementById('linha3')
-linha3.innerHTML += `[ ${pontos[2][1]} → ${pontos[2][0]} pontos]`
-var linha4 = document.getElementById('linha4')
-linha4.innerHTML += `[ ${pontos[3][1]} → ${pontos[3][0]} pontos]`
-var linha5 = document.getElementById('linha5')
-linha5.innerHTML += `[ ${pontos[4][1]} → ${pontos[4][0]} pontos]`
-var linha6 = document.getElementById('linha6')
-linha6.innerHTML += `[ ${pontos[5][1]} → ${pontos[5][0]} pontos]`
-
-function lançar(){
     
-    nota = 100
-     var notaFinal = document.getElementById("resultados")//span da nota no HTML
-     var foto1 = document.getElementById("foto1")
+var nomePonto2 =[] 
 
-    var radyn = [0,0,0,0,0,0]
+    function criar(){
+        const itens = document.getElementById('itens')
+        for (let index = 0; index < pontos.length; index++) {
+            itens.innerHTML += `<div>
+            <input type="radio" name="t${index}" id="Não" checked >
+            <label for="não">sim</label>
+            <input type="radio" name="t${index}" id="Sim">
+            <label for="sim">não</label>
+            <span id="tex${index}">     -     </span> 
+            </div>`
+        }
+        for (let i = 0; i < pontos.length; i++) {
+            nomePonto2.push(document.getElementById(`tex${i}`))
+            nomePonto2[i].innerHTML += `[ ${pontos[i][1]} → ${pontos[i][0]} pontos]`       
+        } 
+    }
 
-      radyn[0] = document.getElementsByName("yesno")
-      radyn[1] = document.getElementsByName("yesno1")
-      radyn[2] = document.getElementsByName("yesno2")
-      radyn[3] = document.getElementsByName("yesno3")
-      radyn[4] = document.getElementsByName("yesno4")
-      radyn[5] = document.getElementsByName("yesno5")
+    function lançar(){
     
+        nota = 100
+        var notaFinal = document.getElementById("resultados")//span da nota no HTML
+        var foto1 = document.getElementById("foto1")
+        var radyn = []
+
+        for (let e = 0; e < pontos.length; e++) {
+            radyn.push(document.getElementsByName(`t${e}`))
+            console.log(radyn[e])
+        }
+        
+
     function descontar(arei){
         if(arei[2]==true){
             nota-=arei[0]
@@ -55,6 +62,7 @@ function lançar(){
         }
         descontar(pontos[i])
     }
+
    if(nota<0){
        nota=0
    }
@@ -66,5 +74,6 @@ function lançar(){
     img.removeAttribute('src','midia/Joinha.png')
    }
    foto1.appendChild(img) //joga a imagem na div da var foto1
-   
+   console.log(pontos)  
 }
+ 
