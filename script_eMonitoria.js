@@ -162,3 +162,8 @@ function lancar() {
     foto1.appendChild(img) //joga a imagem na div da var foto1
 
 }
+
+function reset() {
+    const doc = document.getElementById('section')
+    doc.removeChild(doc.childNodes[0])
+}
