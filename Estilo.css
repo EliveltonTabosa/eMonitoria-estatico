@@ -69,3 +69,8 @@ img#dorinha{
      max-width: 15px;
      max-height: 15px;
 }
+#descrição{
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;  
+}

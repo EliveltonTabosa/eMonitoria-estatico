@@ -10,13 +10,13 @@ let pontos=[
     ]
 
 var nota = 100
-var n = document.getElementById('n')   //'n' é o span da nota dentro da div
+let n = document.getElementById('n')   //'n' é o span da nota dentro da div
 n.innerHTML = nota
-var img = document.createElement('img') // img teste
+let img = document.createElement('img') // img teste
 img.setAttribute('id','foto') // img teste
 
     
-var nomePonto2 =[] 
+let nomePonto2 =[] 
 
     function criar(){
         const itens = document.getElementById('itens')
