@@ -12,12 +12,20 @@
     <h1><strong>eMonitoria</strong></h1>
 </header>
 <section>
-    <div id="itens"></div>
+    <div id="itens">
+        
+        <div id="dadosTeleatendente">
+            <span>Nome: <input type="text" id="nomeTeleatendente" size=54 maxlength=200></span>
+            <span>Equipe: <input type="text" id="equipeTeleatendente" size=6 maxlength=20></span>
+            <span id="mm">Matricula: <input type="text" id="matriculaTeleatendente" size=10 maxlength=6 ></span>
+           
+        </div>
+    </div>
     <div>
         <label>Descrição: ↴<p></label>
         <textarea id="descrição" cols="67" rows="7" > </textarea>
     </div>
-    <input type="button" id="botão" value="Gerar Nota" onclick="lançar()">
+    <input type="button" id="botão" value="Inserir monitoria" onclick=" armazenar()">
     <div id="resultados">Nota → <span id="n"></span></div>
     <div id="foto1"></div>
 </section>
