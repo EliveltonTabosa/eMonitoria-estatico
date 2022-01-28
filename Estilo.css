@@ -117,3 +117,17 @@ img#dorinha{
 #mm{
     float:right;
 }
+#tabela{
+    border: 1px;
+}
+h2{
+    border-width:1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    font-weight:bolder;
+    border-radius: 10px;
+    padding: 12px; 
+    margin: 10px;
+    color:rgb(0, 96, 99);
+    font-size: 20px;
+}
